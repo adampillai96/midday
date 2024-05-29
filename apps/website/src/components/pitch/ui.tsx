@@ -1,6 +1,13 @@
+import React from "react";
 import { cn } from "@midday/ui/cn";
 
-export function Card({ children, className }) {
+// Define the prop types for the Card component
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(

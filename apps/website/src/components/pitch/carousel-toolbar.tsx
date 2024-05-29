@@ -27,7 +27,14 @@ type Props = {
   views: number;
 };
 
-const popupCenter = ({ url, title, w, h }) => {
+type PopupCenterParams = {
+  url: string;
+  title: string;
+  w: number;
+  h: number;
+};
+
+const popupCenter = ({ url, title, w, h }: PopupCenterParams) => {
   const dualScreenLeft =
     window.screenLeft !== undefined ? window.screenLeft : window.screenX;
   const dualScreenTop =
